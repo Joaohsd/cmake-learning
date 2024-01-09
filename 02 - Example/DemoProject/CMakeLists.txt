@@ -6,7 +6,7 @@ configure_file(demoprojectConfig.h.in demoprojectConfig.h)
 
 add_executable(demoproject cpp/main.cpp)
 
-target_include_directories(demoproject PUBLIC ${PROJECT_BINARY_DIR})
+target_include_directories(demoproject PUBLIC ${PROJECT_BINARY_DIR}) # For definitions in demoprojectConfig.h
 
 # If the library was not installed in system, we can use the following command (for this example):
 target_link_directories(demoproject PRIVATE ${CMAKE_SOURCE_DIR}/../DemoLib/build/)
